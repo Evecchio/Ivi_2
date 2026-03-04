@@ -3,18 +3,18 @@ import ProductCard from '../components/ProductCard';
 import { Product } from '../types';
 
 const CATEGORIES = [
-  { name: 'Capris', image: 'https://picsum.photos/seed/capris/300/300' },
-  { name: 'Tops', image: 'https://picsum.photos/seed/tops/300/300' },
-  { name: 'Leggings', image: 'https://picsum.photos/seed/leggings/300/300' },
-  { name: 'Lencería', image: 'https://picsum.photos/seed/lenceria/300/300' },
-  { name: 'Shorts', image: 'https://picsum.photos/seed/shorts/300/300' },
-  { name: 'Camperas', image: 'https://picsum.photos/seed/camperas/300/300' },
+  { name: 'CALZAS', image: 'https://picsum.photos/seed/calzas/300/300' },
+  { name: 'TOPS', image: 'https://picsum.photos/seed/tops/300/300' },
+  { name: 'SHORTS', image: 'https://picsum.photos/seed/shorts/300/300' },
+  { name: 'REMERAS', image: 'https://picsum.photos/seed/remeras/300/300' },
+  { name: 'BUZOS', image: 'https://picsum.photos/seed/buzos/300/300' },
+  { name: 'CAMPERAS', image: 'https://picsum.photos/seed/camperas/300/300' },
 ];
 
 const FEATURED_PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'TOP C/FRUNCE EN DELANTERO TERCIOPECO',
+    name: 'TOP C/FRUNCE EN DELANTERO TERCIOPELO',
     price: 23990,
     originalPrice: 39990,
     category: 'Tops',
@@ -32,7 +32,7 @@ const FEATURED_PRODUCTS: Product[] = [
   },
   {
     id: '3',
-    name: 'CAPRI ESTAMPADO SIMIL TERCIOPECO',
+    name: 'CAPRI ESTAMPADO SIMIL TERCIOPELO',
     price: 32990,
     originalPrice: 54990,
     category: 'Capris',
@@ -53,74 +53,65 @@ const FEATURED_PRODUCTS: Product[] = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Top Banner */}
-      <div className="bg-primary text-black text-center py-2 px-4 text-[10px] font-semibold tracking-[0.3em] uppercase">
-        COMPLIMENTARY SHIPPING ON ORDERS OVER $500
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative h-[80vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://picsum.photos/seed/luxury-fashion/1920/1080")' }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 flex flex-col justify-center items-center text-center">
-          <span className="text-primary text-xs tracking-[0.3em] uppercase mb-6 font-semibold">
-            The New Standard
-          </span>
-          <h1 className="text-5xl md:text-8xl font-serif text-white mb-8 leading-none">
-            Elegance <br/><span className="italic font-light">Redefined</span>
-          </h1>
-          <p className="text-sm md:text-base text-white/80 max-w-lg mx-auto mb-12 font-light tracking-wide">
-            Discover our latest collection of meticulously crafted pieces designed for the modern aesthete.
-          </p>
-          <a
-            href="/collection"
-            className="inline-block border border-white text-white px-12 py-4 text-xs tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-colors duration-500"
-          >
-            Explore Collection
-          </a>
-        </div>
-      </section>
-
       {/* Category Highlights */}
-      <section className="py-24 max-w-7xl mx-auto px-4 w-full border-b border-white/10">
-        <div className="flex overflow-x-auto gap-12 pb-8 hide-scrollbar justify-between">
+      <section className="pt-16 pb-8 max-w-7xl mx-auto px-4 w-full">
+        <div className="flex overflow-x-auto gap-6 md:gap-10 pb-4 hide-scrollbar justify-start md:justify-center">
           {CATEGORIES.map((cat) => (
             <a key={cat.name} href="#" className="flex flex-col items-center group shrink-0">
-              <div className="w-32 h-40 md:w-48 md:h-64 overflow-hidden mb-6">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border border-slate-200 group-hover:border-primary transition-colors shadow-lg group-hover:shadow-xl">
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-white/70 group-hover:text-primary transition-colors">{cat.name}</span>
+              <span className="mt-4 text-[11px] font-bold tracking-widest uppercase text-slate-900 group-hover:text-primary transition-colors">
+                {cat.name}
+              </span>
             </a>
           ))}
         </div>
       </section>
 
       {/* Featured Products */}
-      <section className="py-32 max-w-7xl mx-auto px-4 w-full">
-        <div className="flex flex-col items-center mb-16">
-          <span className="text-primary text-[10px] tracking-[0.3em] uppercase mb-4">Curated Selection</span>
-          <h2 className="text-4xl font-serif text-white text-center">Featured Pieces</h2>
+      <section className="pt-6 pb-12 max-w-7xl mx-auto px-4 w-full mb-12">
+        <div className="flex items-center justify-between mb-10">
+          <h2 className="text-2xl md:text-3xl font-black tracking-tighter uppercase text-slate-900">
+            DESTACADOS
+          </h2>
+          <a href="/collection" className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-primary underline underline-offset-4">
+            Ver todo
+          </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10">
           {FEATURED_PRODUCTS.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        <div className="mt-20 text-center">
+      </section>
+
+      {/* Hero Section */}
+      <section className="relative w-full h-[70vh] md:h-[85vh] bg-slate-100 overflow-hidden">
+        <img 
+          src="https://picsum.photos/seed/hero-sport/1920/1080" 
+          alt="Nueva Colección" 
+          className="absolute inset-0 w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+          <h2 className="text-white text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4">
+            NUEVA TEMPORADA
+          </h2>
+          <h1 className="text-white text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 shadow-sm">
+            WINTER 24
+          </h1>
           <a
             href="/collection"
-            className="inline-block border-b border-primary text-primary pb-1 text-xs tracking-[0.2em] uppercase hover:text-white hover:border-white transition-colors"
+            className="inline-block bg-white text-slate-900 px-10 py-4 text-xs font-bold hover:bg-primary hover:text-white transition-colors uppercase tracking-widest"
           >
-            View All Products
+            VER COLECCIÓN
           </a>
         </div>
       </section>

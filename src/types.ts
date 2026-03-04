@@ -8,6 +8,8 @@ export interface Product {
   isNew?: boolean;
   sale?: string;
   description?: string;
+  stock?: number;
+  colors?: string[];
 }
 
 export interface CartItem extends Product {

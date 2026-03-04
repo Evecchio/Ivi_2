@@ -7,6 +7,11 @@ import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Collection from './pages/Collection';
+import NewArrivals from './pages/NewArrivals';
+import Sale from './pages/Sale';
+import Wholesale from './pages/Wholesale';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 export default function App() {
   return (
@@ -20,6 +25,11 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/collection" element={<Collection />} />
+            <Route path="/nuevos-ingresos" element={<NewArrivals />} />
+            <Route path="/sale" element={<Sale />} />
+            <Route path="/mayorista" element={<Wholesale />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </main>
         <Footer />

@@ -20,6 +20,8 @@ const FEATURED_PRODUCTS: Product[] = [
     category: 'Tops',
     image: 'https://picsum.photos/seed/top1/600/800',
     sale: '40%',
+    stock: 3,
+    colors: ['#000000', '#FFFFFF', '#FF1493'],
   },
   {
     id: '2',
@@ -29,6 +31,8 @@ const FEATURED_PRODUCTS: Product[] = [
     category: 'Shorts',
     image: 'https://picsum.photos/seed/short1/600/800',
     sale: '40%',
+    stock: 10,
+    colors: ['#000000', '#808080'],
   },
   {
     id: '3',
@@ -38,6 +42,8 @@ const FEATURED_PRODUCTS: Product[] = [
     category: 'Capris',
     image: 'https://picsum.photos/seed/capri1/600/800',
     sale: '40%',
+    stock: 2,
+    colors: ['#000000'],
   },
   {
     id: '4',
@@ -47,6 +53,8 @@ const FEATURED_PRODUCTS: Product[] = [
     category: 'Shorts',
     image: 'https://picsum.photos/seed/short2/600/800',
     sale: '40%',
+    stock: 15,
+    colors: ['#FFFFFF'],
   },
 ];
 

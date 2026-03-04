@@ -87,11 +87,24 @@ export default function ProductDetail() {
           </div>
 
           <div className="py-4 border-y border-slate-100">
-            <div className="flex items-baseline gap-3 mb-1">
-              <span className="text-3xl font-black text-slate-900">${formatPrice(23990)}</span>
-              <span className="text-lg line-through text-slate-400">${formatPrice(39990)}</span>
+            <div className="flex flex-col gap-2 mb-1">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl font-black text-red-600">${formatPrice(23990)}</span>
+                <span className="text-lg line-through text-slate-400">${formatPrice(39990)}</span>
+                <span className="bg-red-600 text-white text-xs font-black px-2 py-1 uppercase tracking-wider ml-2">
+                  40% OFF
+                </span>
+                <span className="bg-primary text-white text-xs font-black px-2 py-1 uppercase tracking-wider">
+                  Ahorrás ${formatPrice(39990 - 23990)}!
+                </span>
+              </div>
+              <div>
+                <span className="text-xs font-bold bg-red-100 text-red-700 px-2 py-1 rounded-sm uppercase tracking-wider inline-block">
+                  ¡Oportunidad!
+                </span>
+              </div>
             </div>
-            <p className="text-slate-600 font-semibold text-xs uppercase tracking-widest mt-2">
+            <p className="text-slate-600 font-semibold text-xs uppercase tracking-widest mt-4">
               3 CUOTAS SIN INTERÉS DE <span className="text-slate-900">${formatPrice(7996)}</span>
             </p>
             <a href="#" className="text-primary text-xs font-bold underline underline-offset-2 mt-1 inline-block">Ver medios de pago</a>

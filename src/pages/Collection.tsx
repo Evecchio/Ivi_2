@@ -12,6 +12,8 @@ const PRODUCTS: Product[] = [
     category: 'Tops',
     image: 'https://picsum.photos/seed/top1/600/800',
     sale: '40%',
+    stock: 3,
+    colors: ['#000000', '#FFFFFF', '#FF1493'],
   },
   {
     id: '9',
@@ -19,6 +21,8 @@ const PRODUCTS: Product[] = [
     price: 35990,
     category: 'Calzas',
     image: 'https://picsum.photos/seed/calza1/600/800',
+    stock: 8,
+    colors: ['#000000', '#000080'],
   },
   {
     id: '10',
@@ -28,6 +32,8 @@ const PRODUCTS: Product[] = [
     category: 'Buzos',
     image: 'https://picsum.photos/seed/buzo1/600/800',
     sale: '15%',
+    stock: 2,
+    colors: ['#808080', '#FFC0CB'],
   },
   {
     id: '11',
@@ -35,6 +41,8 @@ const PRODUCTS: Product[] = [
     price: 21990,
     category: 'Tops',
     image: 'https://picsum.photos/seed/top2/600/800',
+    stock: 12,
+    colors: ['#FF0000', '#000000'],
   },
   {
     id: '12',
@@ -42,6 +50,8 @@ const PRODUCTS: Product[] = [
     price: 28990,
     category: 'Shorts',
     image: 'https://picsum.photos/seed/short3/600/800',
+    stock: 4,
+    colors: ['#000000', '#008000'],
   },
   {
     id: '13',
@@ -51,6 +61,8 @@ const PRODUCTS: Product[] = [
     category: 'Camperas',
     image: 'https://picsum.photos/seed/campera1/600/800',
     sale: '20%',
+    stock: 1,
+    colors: ['#000000'],
   },
   {
     id: '14',
@@ -58,6 +70,8 @@ const PRODUCTS: Product[] = [
     price: 18990,
     category: 'Remeras',
     image: 'https://picsum.photos/seed/musculosa1/600/800',
+    stock: 20,
+    colors: ['#FFFFFF', '#000000', '#FFA500'],
   },
   {
     id: '15',
@@ -67,6 +81,8 @@ const PRODUCTS: Product[] = [
     category: 'Shorts',
     image: 'https://picsum.photos/seed/ciclista1/600/800',
     sale: '30%',
+    stock: 6,
+    colors: ['#000000', '#800080'],
   },
 ];
 

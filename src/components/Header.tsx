@@ -8,9 +8,9 @@ export default function Header() {
   const navLinks = [
     { name: 'INICIO', path: '/' },
     { name: 'PRODUCTOS', path: '/collection' },
-    { name: 'NUEVOS INGRESOS', path: '#' },
-    { name: 'SALE', path: '#' },
-    { name: 'MAYORISTA', path: '#' },
+    { name: 'NUEVOS INGRESOS', path: '/nuevos-ingresos' },
+    { name: 'SALE', path: '/sale' },
+    { name: 'MAYORISTA', path: '/mayorista' },
     { name: 'CONTACTO', path: '/contact' },
   ];
 
@@ -30,9 +30,12 @@ export default function Header() {
         {/* Logo */}
         <div className="flex-1 md:flex-none text-center md:text-left">
           <Link to="/" className="inline-block">
-            <h1 className="text-2xl font-black uppercase tracking-tighter text-slate-900">
-              IVANA<span className="text-primary">SPORT</span>
-            </h1>
+            <img 
+              src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/164/451/themes/common/logo-1725546252-1725546253-731b9c9714a8525b6826131498064a271725546253-320-0.png" 
+              alt="Ivana Sport Logo" 
+              className="h-8 md:h-10 w-auto"
+              referrerPolicy="no-referrer"
+            />
           </Link>
         </div>
         
@@ -56,9 +59,9 @@ export default function Header() {
           <button className="p-1 text-slate-900 hover:text-primary transition-colors hidden sm:block">
             <Search className="w-5 h-5" />
           </button>
-          <button className="p-1 text-slate-900 hover:text-primary transition-colors hidden sm:block">
+          <Link to="/login" className="p-1 text-slate-900 hover:text-primary transition-colors hidden sm:block">
             <User className="w-5 h-5" />
-          </button>
+          </Link>
           <Link to="/cart" className="p-1 text-slate-900 hover:text-primary transition-colors relative">
             <ShoppingBag className="w-5 h-5" />
             <span className="absolute -top-1 -right-1 bg-primary text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold">
